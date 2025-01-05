@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Title of the webpage -->
+    <title> GCTU BOOK SHOP </title>
+
+    <!-- Meta tags for character encoding and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Linking Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
+    <!-- Linking Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Linking the external CSS file  used to style the page-->
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <style type="text/css">
+        /* Overall page layout using embedded CSS*/
+        body {
+          flex-direction: column;
+          background: url("../background/ranking.jpg") center center/ cover;
+          box-shadow: 0 0 0 20;
+          max-width: 150%;
+          min-height: 100vh;
+        }
+    </style>
+</head>
+
+<body style="display: flex"> <!--Inline CSS for the body-->
+    <!-- Top section containing shopping bag and user buttons -->
+    <div class="top_basket">
+        <div class="top_basket_holder">
+            <button id="bag_btn"><span class="material-icons-outlined" id="main_shopping_bag">shopping_bag</span></button>
+            <button id="user_btn"><span class="material-icons-outlined" id="main_user">account_circle</span></button>
+        </div>
+    </div>
+
+    <!-- Header section containing logo and website title -->
+    <div class="logo_header_basket">
+        <img src="../logos/gctu logo.png" alt="logo__" id="logo">
+        <h1>GCTU ONLINE BOOKSHOP</h1>
+    </div>
+
+    <a href="search.html" class="search-button" target="_blank">Looking for a book? Click here</a>
+
+
+
+    <!-- Introduction section, including an introduction paragraph-->
+    <div class="introduction_basket">
+        <h3>Welcome To GCTU  Book Online Hub </h3>
+        <p id="intro">The GCTU Online Library is a digital hub designed to provide students, faculty, and researchers with seamless access to a vast collection of academic resources. With an intuitive platform, the library is committed to fostering knowledge, innovation, and research excellence within the GCTU community.</p>
+    </div>
+
+    <!-- Trending books section which changes automatically -->
+    <div class="trending_box">
+        <span id="trending">Trending</span>
+        <img id="book_cover" src="../bookCovers/WhatsApp1.jpg">
+        <!-- <img id="book_cover" src="../bookCovers/WhatsApp2.jpg">
+        <img id="book_cover" src="../bookCovers/WhatsApp3.jpg"> -->
+    </div>
+
+    <!-- Leaderboard section that opens in another tab when clicked -->
+    <div class="leaderboard_basket">
+        <span>Top Books</span>
+        <img alt="leaderboard" src="../icons/leaderboard.png"/>
+        <button onclick="window.open('../xml/books.xml', '_blank');">See Leaderboard</button>
+
+    </div>
+
+    <!-- Main content section -->
+    <div class="main_basket">
+        <!-- Time basket with an embedded XML table for the opening times-->
+        <div class="time_basket">
+            <iframe src="../xml/table2.xml" xslt="../xslt/table2.xsl" height="440px" width="320px" style="border: none; align-content:center; justify-content: center;"></iframe>
+        </div>
+
+        <!-- Genres section -->
+        <div class="Genres_basket">
+            <h2>Programs/courses</h2>
+            <ul>
+                <!-- Genre buttons linking to respective genre pages -->
+                <button id="genre" onclick="window.location.href = 'fantasy.html';"><li>Cyber Security</li></button>
+                <button id="genre" onclick="window.location.href = 'horror.html';"><li>Comp.Science</li></button>
+                <button id="genre" onclick="window.location.href = 'mystery.html';"><li>I.T</li></button>
+                <button id="genre" onclick="window.location.href = 'sciencefiction.html';"><li>Networking</li></button>
+                <button id="genre" onclick="window.location.href = 'history.html';"><li>E. Engineering</li></button>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <footer>
+        <h4>Contact Information</h4>
+        <!-- Contact information and social media links -->
+        <div id="info">
+            <div class="find">
+                <div id="contact">
+                    <span class="material-icons-outlined" id="contact_icon">mail</span>
+                    <a href="mailto:info@gctu.edu.gh">info@gctu.edu.gh<!--Mail hyperlink-->
+                </div>
+                <div id="contact">
+                    <span class="material-icons-outlined" id="contact_icon">call</span>
+                    <span>+233(0) 302 221446/302 21412/302 221479
+
+                       
+                        
+            
+                        </span>
+                </div>
+                <div id="contact">
+                    <!-- <span class="material-icons-outlined" id="contact_icon">location_on</span>
+                    <a href="https://maps.app.goo.gl/M3ADnHEa1qBFjjFPA">Map</a> -->
+                </div>
+            </div>
+            <div class="socials">
+                <div id="contact">
+                    <img src="../icons/facebook.svg" id="social_icons">
+                    <a href="https://www.facebook.com/Gctulibrary//">Facebook</a>
+                </div>
+                <div id="contact">
+                    <img src="../icons/instagram.webp" id="social_icons">
+                    <a href="https://www.instagram.com/gctu.gh">Instagram</a>
+                </div>
+                <div id="contact">
+                    <!-- <img src="../icons/X.svg" id="social_icons">
+                    <a href="https://twitter.com/mdx_mtius?lang=en">X</a> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Linking JavaScript file -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
